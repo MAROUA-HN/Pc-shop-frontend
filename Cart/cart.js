@@ -263,7 +263,7 @@ checkoutButton.addEventListener("click", () => {
         return;
     }
 
-    window.location.href = "checkout.html";
+    window.location.href = "../Checkout/checkout.html";
 
 });
 

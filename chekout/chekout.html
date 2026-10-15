@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | PC Shop</title>
+    <link rel="stylesheet" href="../chekout/chekout.css">
+    <script type="module" src="../chekout/chekout.js"></script>
+</head>
+<body>
+
+    <header class="checkout-header">
+        <a href="../index.html" class="logo">PC<span>SHOP</span></a>
+        <a href="../Cart/cart.html">Back to Cart</a>
+    </header>
+
+    <main class="checkout-container">
+        <div class="page-heading">
+            <p class="eyebrow">PC SHOP / CHECKOUT</p>
+            <h1>Complete Your Order</h1>
+            <p>Enter your details to place your order.</p>
+        </div>
+
+        <div class="checkout-layout">
+
+            <section class="checkout-form-section">
+                <form id="checkout-form">
+
+                    <div class="form-card">
+                        <h2><span>01</span> Contact Information</h2>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name"
+                                    name="firstName" required
+                                    autocomplete="given-name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name"
+                                    name="lastName" required
+                                    autocomplete="family-name">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email"
+                                    name="email" required
+                                    autocomplete="email">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone"
+                                    name="phone" required
+                                    autocomplete="tel">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-card">
+                        <h2><span>02</span> Delivery Address</h2>
+
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="address">Street Address</label>
+                                <input type="text" id="address"
+                                    name="address" required
+                                    autocomplete="street-address">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city"
+                                    name="city" required
+                                    autocomplete="address-level2">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="wilaya">Wilaya</label>
+                                <input type="text" id="wilaya"
+                                    name="wilaya" required
+                                    autocomplete="address-level1">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="notes">
+                                    Delivery Notes (Optional)
+                                </label>
+                                <textarea id="notes" name="notes"
+                                    rows="3"
+                                    placeholder="Any additional instructions..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-card">
+                        <h2><span>03</span> Payment Method</h2>
+
+                        <label class="payment-option">
+                            <input type="radio" name="payment"
+                                value="cash" checked>
+                            <span class="payment-icon">💵</span>
+                            <span class="payment-text">
+                                <strong>Cash on Delivery</strong>
+                                <small>Pay when your order arrives.</small>
+                            </span>
+                        </label>
+                    </div>
+
+                    <p id="checkout-message" role="status"
+                        aria-live="polite"></p>
+
+                    <button type="submit" id="place-order-button">
+                        Place Order <span>→</span>
+                    </button>
+
+                </form>
+            </section>
+
+            <aside class="order-summary">
+                <h2>Your Order</h2>
+
+                <div id="checkout-items"></div>
+
+                <p id="checkout-empty" hidden>
+                    Your cart is empty.
+                    <a href="cart.html">Return to cart</a>
+                </p>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="checkout-subtotal">0 DZD</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Delivery</span>
+                    <span id="checkout-delivery">0 DZD</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="checkout-total">0 DZD</span>
+                </div>
+
+                <p class="secure-note">
+                    🔒 Your information is used to prepare your order.
+                </p>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="checkout-footer">
+        <p>© 2026 PC Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
