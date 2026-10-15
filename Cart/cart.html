@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart | PC Shop</title>
+
+    <link rel="stylesheet" href="../Cart/cartStyle.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <a href="home.html" class="logo">
+            pc_shop
+        </a>
+
+        <nav class="nav-links">
+            <a href="products.html#laptops">Laptop</a>
+            <a href="products.html#desktops">Desktop</a>
+            <a href="products.html#accessories">Accessories</a>
+        </nav>
+
+        <div class="nav-icons">
+
+            <button type="button" aria-label="Search">
+                &#128269;
+            </button>
+
+            <a href="login.html" aria-label="Account">
+                &#128100;
+            </a>
+
+            <a href="cart.html" aria-label="Shopping cart">
+                &#128722;
+                <span id="cart-count">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Shopping Cart Section -->
+    <main class="cart-page">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="home.html">Home</a>
+            <span></span>
+            <span>Shopping Cart</span>
+        </div>
+
+        <div class="cart-layout">
+
+            <!-- Left Side: Cart Items -->
+            <section class="cart-section">
+
+                <div class="cart-heading">
+                    <div>
+                        <h1>Your shopping cart</h1>
+                        <p>Make sure everything looks right before checkout.</p>
+                    </div>
+
+                    <a href="products.html" class="continue-shopping">
+                        Continue shopping
+                    </a>
+                </div>
+
+                <!-- Products will be inserted here by JavaScript -->
+                <div id="cart-items" class="cart-items"></div>
+
+                <!-- Empty Cart Message -->
+                <div id="empty-cart" class="empty-cart" hidden>
+                    <h2>Your cart is empty</h2>
+                    <p>You haven't added any products yet.</p>
+
+                    <a href="products.html" class="continue-shopping">
+                        Explore products
+                    </a>
+                </div>
+
+                <!-- Clear Cart Button -->
+                <div class="cart-actions">
+                    <button type="button" id="clear-cart">
+                        Clear cart
+                    </button>
+                </div>
+
+            </section>
+
+
+            <!-- Right Side: Order Summary -->
+            <aside class="order-summary">
+
+                <div class="summary-heading">
+                    <h2>Order Summary</h2>
+                    <span id="summary-items">0 items</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">0 DZD</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span id="delivery-fee">500 DZD</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="cart-total">0 DZD</span>
+                </div>
+
+                <button type="button" id="checkout-button">
+                    Checkout <span>→</span>
+                </button>
+
+                <p id="cart-message" class="cart-message"
+                   aria-live="polite"></p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="top-line"></div>
+
+        <div class="footer-content">
+
+            <div class="about">
+
+                <h2>pc<span>_</span>shop</h2>
+
+                <p class="description">
+                    Laptops, desktops and accessories, with warranty
+                    and delivery across Algeria.
+                </p>
+
+                <form class="newsletter" id="newsletterForm">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your email"
+                        aria-label="Your email"
+                        required
+                    >
+
+                    <button type="submit">Sign up</button>
+
+                </form>
+
+                <p id="message" class="message"
+                   aria-live="polite"></p>
+
+            </div>
+
+
+            <div class="column">
+                <h3>Products</h3>
+                <a href="products.html#laptops">Laptops</a>
+                <a href="products.html#desktops">Desktop</a>
+                <a href="products.html#accessories">Accessories</a>
+            </div>
+
+
+            <div class="column">
+                <h3>Company</h3>
+                <a href="#">About us</a>
+                <a href="#">Business solutions</a>
+                <a href="#">Our stores</a>
+                <a href="#">Careers</a>
+            </div>
+
+
+            <div class="column">
+                <h3>Support</h3>
+                <a href="#">Contact us</a>
+                <a href="my-orders.html">Track my order</a>
+                <a href="#">Warranty</a>
+                <a href="#">Returns</a>
+            </div>
+
+        </div>
+
+
+        <div class="bottom">
+
+            <p class="copyright">
+                © 2026 pc_shop. All rights reserved.
+            </p>
+
+            <div class="legal">
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Cookies</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script type="module" src="../Cart/cart.js"></script>
+
+</body>
+
+</html>
