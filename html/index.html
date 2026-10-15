@@ -1,12 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.CSS">
+
+    <title>PC Shop</title>
+
+    <link rel="Stylesheet" href="../css/style.css">
 </head>
+
 <body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            pc_shop
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+
+            <a href="#laptops">Laptop</a>
+
+            <a href="#desktops">Desktop</a>
+
+            <a href="#accessories">Accessories</a>
+
+        </nav>
+
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+
+            <button type="button" aria-label="Search">
+                &#128269;
+            </button>
+
+            <button type="button" aria-label="Account">
+                &#128100;
+            </button>
+
+            <button type="button" aria-label="Shopping cart">
+                &#128722;
+            </button>
+
+        </div>
+
+    </header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+
     
+<div class="hero-content">
+
+    <h1>
+        Powerful computers,<br>
+        delivered to your<br>
+        door
+    </h1>
+
+    <p>
+        Laptops and desktops for work, study and gaming,
+        with warranty and delivery to every wilaya.
+    </p>
+
+    <a href="#products" class="hero-button">
+        Shop now
+    </a>
+
+</div>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+
+        <img src="../img/Asus_ZenBook_S16_OLED_UM5606WA-RK220W__90NB13M2-M00CJ0_-removebg-preview.png" alt="Laptop">
+
+    </div>
+
+</section>
+
+
+
+<!-- Featured Products Section -->
+<section class="products" id="products">
+
+    <!-- Section Heading -->
+    <div class="products-heading">
+        <h2>Featured products</h2>
+        <p>Handpicked tech for work, study and play.</p>
+    </div>
+
+    <!-- Products Container -->
+    <div class="products-container">
+
+        <!-- Product 1 -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="../img/laptop.jfif"
+                     alt="ZenBook 14 Laptop">
+            </div>
+
+            <h3>ZenBook 14 Laptop</h3>
+
+            <div class="product-price">
+                <span>$899</span>
+                <button type="button" aria-label="Add laptop to cart">
+                    🛒
+                </button>
+            </div>
+
+            <a href="#" class="product-button">View details</a>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="../img/Desktops _ Amazon_com.jfif"
+                     alt="Gaming Desktop R5">
+            </div>
+
+            <h3>Gaming Desktop R5</h3>
+
+            <div class="product-price">
+                <span>$1,249</span>
+                <button type="button" aria-label="Add gaming desktop to cart">
+                    🛒
+                </button>
+            </div>
+
+            <a href="#" class="product-button">View details</a>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="../img/Gaming mouse.jfif"
+                     alt="Wireless Mouse Pro">
+            </div>
+
+            <h3>Wireless Mouse Pro</h3>
+
+            <div class="product-price">
+                <span>$39</span>
+                <button type="button" aria-label="Add mouse to cart">
+                    🛒
+                </button>
+            </div>
+
+            <a href="#" class="product-button">View details</a>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="../img/headphone.jfif"
+                     alt="Studio Headphones">
+            </div>
+
+            <h3>Studio Headphones</h3>
+
+            <div class="product-price">
+                <span>$89</span>
+                <button type="button" aria-label="Add headphones to cart">
+                    🛒
+                </button>
+            </div>
+
+            <a href="#" class="product-button">View details</a>
+        </article>
+
+    </div>
+
+</section>
+
+ <footer class="footer">
+
+    <div class="top-line"></div>
+
+    <div class="footer-content">
+
+      <div class="about">
+        <h2>pc<span>_</span>shop</h2>
+
+        <p class="description">
+          Laptops, desktops and accessories, with warranty<br>
+          and delivery across Algeria.
+        </p>
+
+        <form class="newsletter" id="newsletterForm">
+          <input
+            type="email"
+            id="email"
+            placeholder="Your email"
+            aria-label="Your email"
+            required
+          >
+          <button type="submit">Sign up</button>
+        </form>
+
+        <p id="message" class="message" aria-live="polite"></p>
+      </div>
+
+      <div class="column">
+        <h3>Products</h3>
+        <a href="#">Laptops</a>
+        <a href="#">Desktop</a>
+        <a href="#">Accessories</a>
+      </div>
+
+      <div class="column">
+        <h3>Company</h3>
+        <a href="#">About us</a>
+        <a href="#">Business solutions</a>
+        <a href="#">Our stores</a>
+        <a href="#">Careers</a>
+      </div>
+
+      <div class="column">
+        <h3>Support</h3>
+        <a href="#">Contact us</a>
+        <a href="#">Track my order</a>
+        <a href="#">Warranty</a>
+        <a href="#">Returns</a>
+      </div>
+
+    </div>
+
+    <div class="bottom">
+      <p class="copyright">
+        © 2026 pc_shop. All rights reserved.
+      </p>
+
+      <div class="legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <script type="module" src="../js/pages/home.js"></script>
+
 </body>
+
 </html>
