@@ -5,14 +5,12 @@
     box-sizing: border-box;
 }
 
-/* Page */
 body {
     background-color: #0b1b2b;
     color: #f5f7fa;
     font-family: Arial, sans-serif;
 }
 
-/* Navigation Bar */
 .navbar {
     display: flex;
     align-items: center;
@@ -24,7 +22,6 @@ body {
     border-bottom: 1px solid #1b2b3d;
 }
 
-/* Logo */
 .logo {
     color: #f5f7fa;
     font-size: 20px;
