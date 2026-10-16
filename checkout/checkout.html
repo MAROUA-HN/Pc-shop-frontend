@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | pc_shop</title>
+  <link rel="stylesheet" href="../checkout/checkout.css">
+  
+<script type="module" src="../checkout/checkout.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">pc_shop</a>
+
+    <nav class="nav-links">
+      <a href="index.html">Laptop</a>
+      <a href="index.html">Desktop</a>
+      <a href="index.html">Accessories</a>
+    </nav>
+
+    <div class="nav-icons">
+      <a href="#" aria-label="Search">⌕</a>
+      <a href="#" aria-label="Account">♟</a>
+      <a href="#" aria-label="Cart">🛒</a>
+    </div>
+  </header>
+
+  <!-- CHECKOUT -->
+  <main class="checkout-container">
+
+    <!-- SHIPPING FORM -->
+    <section class="shipping-card">
+      <div class="breadcrumb">
+        <a href="../home/home.html">Home</a>
+        <span>›</span>
+        <a href="../Cart/cart.html">Cart</a>
+        <span>›</span>
+        <span>checkout</span>
+      </div>
+
+      <h1>Shipping Address</h1>
+
+      <form id="checkoutForm">
+
+        <div class="form-group">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName"
+                 type="text" placeholder="♙   Enter your Full name"
+                 autocomplete="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone"
+                 type="tel" placeholder="☎   XX XX XX XX XX"
+                 autocomplete="tel" required>
+        </div>
+
+        <div class="form-group">
+          <label for="wilaya">Wilaya</label>
+          <input id="wilaya" name="wilaya"
+                 type="text" placeholder="Enter your Wilaya"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input id="city" name="city"
+                 type="text" placeholder="Enter your City"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input id="address" name="address"
+                 type="text" placeholder="⌖   Enter your Address"
+                 autocomplete="street-address" required>
+        </div>
+
+        <label class="save-address">
+          <input type="checkbox" id="saveAddress">
+          <span>Save this address for next time</span>
+        </label>
+
+        <p id="formMessage" class="form-message"
+           aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ORDER SUMMARY -->
+    <section class="summary-card">
+
+      <div class="summary-heading">
+        <h2>Order Summary</h2>
+        <a class="continue-btn" href="index.html">
+          Continue shopping
+        </a>
+      </div>
+
+      <div class="product-list">
+
+        <article class="product">
+          <div class="product-image laptop-image">💻</div>
+          <div class="product-info">
+            <span class="brand">ASUS</span>
+            <h3>ZenBook 14 Laptop</h3>
+            <span class="stock">● &nbsp; In stock</span>
+          </div>
+          <strong class="price">$899.00</strong>
+        </article>
+
+        <article class="product">
+          <div class="product-image">🎧</div>
+          <div class="product-info">
+            <span class="brand">Sony</span>
+            <h3>Studio Headphones</h3>
+            <span class="stock">● &nbsp; In stock</span>
+          </div>
+          <strong class="price">$89</strong>
+        </article>
+
+        <article class="product">
+          <div class="product-image">🎧</div>
+          <div class="product-info">
+            <span class="brand">Logitech</span>
+            <h3>Wireless Mouse Pro</h3>
+            <span class="stock">● &nbsp; In stock</span>
+          </div>
+          <strong class="price">$78.00</strong>
+        </article>
+
+      </div>
+
+      <div class="cost-details">
+        <div class="cost-row">
+          <span>▣ &nbsp; Subtotal</span>
+          <strong id="subtotal">$1,066.00</strong>
+        </div>
+
+        <div class="cost-row">
+          <span>▣ &nbsp; Delivery</span>
+          <strong id="delivery">$5.00</strong>
+        </div>
+      </div>
+
+      <div class="total-row">
+        <span>Total</span>
+        <strong id="total">$1,071.00</strong>
+      </div>
+
+      <button class="place-order" type="submit"
+              form="checkoutForm">
+        Place order
+      </button>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">pc_shop</a>
+        <p>
+          Laptops, desktops and accessories, with warranty<br>
+          and delivery across Algeria.
+        </p>
+
+        <form id="newsletterForm" class="newsletter">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+
+      <div class="footer-column">
+        <h3>Products</h3>
+        <a href="index.html">Laptops</a>
+        <a href="index.html">Desktop</a>
+        <a href="index.html">Accessories</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Company</h3>
+        <a href="#">About us</a>
+        <a href="#">Business solutions</a>
+        <a href="#">Our stores</a>
+        <a href="#">Careers</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Support</h3>
+        <a href="#">Contact us</a>
+        <a href="#">Track my order</a>
+        <a href="#">Warranty</a>
+        <a href="#">Returns</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 pc_shop. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

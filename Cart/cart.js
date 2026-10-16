@@ -6,7 +6,7 @@ import {
     updateCartQuantity,
     clearCart,
     getCartSubtotal
-} from "../state.js";
+} from "../js/state.js";
 
 
 // Get HTML elements

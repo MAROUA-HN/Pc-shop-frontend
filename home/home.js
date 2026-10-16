@@ -1,9 +1,3 @@
-
-/* =================================
-   PC SHOP - HOME PAGE
-================================= */
-
-// 1. Newsletter Form
 const newsletterForm = document.getElementById("newsletterForm");
 const emailInput = document.getElementById("email");
 const message = document.getElementById("message");
