@@ -1,19 +1,13 @@
-
-// Get the cart from localStorage
 function getCart() {
     const savedCart = localStorage.getItem("pc_shop_cart");
 
     return savedCart ? JSON.parse(savedCart) : [];
 }
 
-
-// Save the cart to localStorage
 function saveCart(cart) {
     localStorage.setItem("pc_shop_cart", JSON.stringify(cart));
 }
 
-
-// Add a product to the cart
 function addToCart(product, quantity = 1) {
     const cart = getCart();
 
@@ -27,7 +21,7 @@ function addToCart(product, quantity = 1) {
         cart.push({
             productId: product.id,
             name: product.name,
-            priceDzd: product.priceDzd,
+            price: product.price,
             image: product.image,
             quantity: quantity
         });
@@ -36,8 +30,6 @@ function addToCart(product, quantity = 1) {
     saveCart(cart);
 }
 
-
-// Remove a product from the cart
 function removeFromCart(productId) {
     const cart = getCart();
 
@@ -48,8 +40,6 @@ function removeFromCart(productId) {
     saveCart(updatedCart);
 }
 
-
-// Update product quantity
 function updateCartQuantity(productId, quantity) {
     const cart = getCart();
 
@@ -70,25 +60,19 @@ function updateCartQuantity(productId, quantity) {
     saveCart(cart);
 }
 
-
-// Clear the entire cart
 function clearCart() {
     localStorage.removeItem("pc_shop_cart");
 }
 
-
-// Calculate subtotal
 function getCartSubtotal() {
     const cart = getCart();
 
     return cart.reduce(
-        (total, item) => total + item.priceDzd * item.quantity,
+        (total, item) => total + item.price * item.quantity,
         0
     );
 }
 
-
-// Export functions so other files can use them
 export {
     getCart,
     saveCart,

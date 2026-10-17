@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pc_shop</title>
     <link rel="stylesheet" href="product.css">
-    <script src="product.js" defer></script>
+    
+<script type="module" src="product.js"></script>
+
 </head>
 <body>
     <header class="header_container">
@@ -17,8 +19,8 @@
                 <li><a href="#">Accessories</a></li>
             </ul>
             <div class="header_icons">
-                <a href="index.html"><img src="User.png" alt="img"></a>
-                <a href="#"><img src="Vecto3r.png" alt="img"></a>
+                <a href="../login page/index.html"><img src="User.png" alt="img"></a>
+                <a href="../Cart/cart.html"><img src="Vecto3r.png" alt="img"></a>
             </div>
         </nav>
          
@@ -28,7 +30,7 @@
             <div class="hero_left">
                 <nav class="nav_content">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="../home/home.html">Home</a></li>
                         <span>></span>
                         <li><a href="#">Product</a></li>
                     </ul>
@@ -45,6 +47,45 @@
             <hr>
         </section>
          
+
+        <section class="catalog" id="products">
+    <div class="catalog-toolbar">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="All">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="Laptop">
+                Laptop
+            </button>
+
+            <button class="filter-btn" data-filter="Desktop">
+                Desktop
+            </button>
+
+            <button class="filter-btn" data-filter="Accessories">
+                Accessories
+            </button>
+        </div>
+
+        <form id="search-form">
+            <input
+                id="search-input"
+                type="search"
+                placeholder="Search by name or brand"
+            >
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <p id="results-message"></p>
+
+    <div class="product-grid" id="product-grid"></div>
+
+    <p id="empty-state" hidden>
+        No products found. Try another search or category.
+    </p>
+</section>
     </main>
 </body>
 </html>

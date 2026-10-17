@@ -9,7 +9,7 @@ import {
 } from "../js/state.js";
 
 
-// Get HTML elements
+
 const cartContainer = document.getElementById("cart-items");
 const emptyCartMessage = document.getElementById("empty-cart");
 
@@ -25,38 +25,38 @@ const checkoutButton = document.getElementById("checkout-button");
 const cartMessage = document.getElementById("cart-message");
 
 
-// Delivery fee
-const DELIVERY_FEE = 500;
+const DELIVERY_FEE = 5;
 
 
-// Format prices in DZD
+
 function formatPrice(price) {
-    return `${Number(price).toLocaleString("fr-DZ")} DZD`;
+    return price.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD"
+    });
 }
 
-
-// Display cart products
 function renderCart() {
 
     const cart = getCart();
 
-    // Clear previous product elements
+    
     cartContainer.innerHTML = "";
 
-    // Calculate total quantity
+   
     const totalQuantity = cart.reduce(
         (total, item) => total + item.quantity,
         0
     );
 
-    // Update cart counter and summary
+    
     cartCountElement.textContent = totalQuantity;
 
     summaryItemsElement.textContent =
         `${totalQuantity} ${totalQuantity === 1 ? "item" : "items"}`;
 
 
-    // Check if cart is empty
+   
     if (cart.length === 0) {
 
         emptyCartMessage.hidden = false;
@@ -72,21 +72,21 @@ function renderCart() {
     }
 
 
-    // Cart contains products
+    
     emptyCartMessage.hidden = true;
 
     checkoutButton.disabled = false;
     clearCartButton.disabled = false;
 
 
-    // Display each product
+    
     cart.forEach((item) => {
 
         const productElement = document.createElement("article");
         productElement.className = "cart-item";
 
 
-        // Product image
+        
         const image = document.createElement("img");
 
         image.src = item.image;
@@ -94,7 +94,7 @@ function renderCart() {
         image.className = "cart-item-image";
 
 
-        // Product information
+        
         const productInfo = document.createElement("div");
         productInfo.className = "cart-item-info";
 
@@ -102,12 +102,12 @@ function renderCart() {
         productName.textContent = item.name;
 
         const productPrice = document.createElement("p");
-        productPrice.textContent = formatPrice(item.priceDzd);
+        productPrice.textContent = formatPrice(item.price);
 
         productInfo.append(productName, productPrice);
 
 
-        // Quantity controls
+        
         const quantityControls = document.createElement("div");
         quantityControls.className = "quantity-controls";
 
@@ -149,17 +149,17 @@ function renderCart() {
         );
 
 
-        // Product total price
+        
         const itemTotal = document.createElement("p");
 
         itemTotal.className = "cart-item-total";
 
         itemTotal.textContent = formatPrice(
-            Number(item.priceDzd) * item.quantity
+            Number(item.price) * item.quantity
         );
 
 
-        // Remove button
+        
         const removeButton = document.createElement("button");
 
         removeButton.type = "button";
@@ -167,7 +167,7 @@ function renderCart() {
         removeButton.className = "remove-btn";
 
 
-        // Decrease quantity
+        
         decreaseButton.addEventListener("click", () => {
 
             if (item.quantity > 1) {
@@ -182,7 +182,7 @@ function renderCart() {
         });
 
 
-        // Increase quantity
+        
         increaseButton.addEventListener("click", () => {
 
             updateCartQuantity(
@@ -194,7 +194,7 @@ function renderCart() {
         });
 
 
-        // Remove product from cart
+        
         removeButton.addEventListener("click", () => {
 
             removeFromCart(item.productId);
@@ -206,7 +206,7 @@ function renderCart() {
         });
 
 
-        // Add elements to product card
+        
         productElement.append(
             image,
             productInfo,
@@ -220,7 +220,7 @@ function renderCart() {
     });
 
 
-    // Calculate subtotal
+    
     const subtotal = getCartSubtotal();
 
     // Apply delivery fee only when cart contains products
@@ -230,7 +230,7 @@ function renderCart() {
     const total = subtotal + delivery;
 
 
-    // Update order summary
+    
     subtotalElement.textContent = formatPrice(subtotal);
 
     deliveryElement.textContent = formatPrice(delivery);
@@ -240,7 +240,7 @@ function renderCart() {
 }
 
 
-// Clear the entire cart
+
 clearCartButton.addEventListener("click", () => {
 
     clearCart();
@@ -252,7 +252,7 @@ clearCartButton.addEventListener("click", () => {
 });
 
 
-// Proceed to checkout
+
 checkoutButton.addEventListener("click", () => {
 
     if (getCart().length === 0) {
@@ -263,10 +263,10 @@ checkoutButton.addEventListener("click", () => {
         return;
     }
 
-    window.location.href = "../Checkout/checkout.html";
+    window.location.href = "../checkout/checkout.html";
 
 });
 
 
-// Initial display
+
 renderCart();

@@ -6,10 +6,10 @@ if (newsletterForm && emailInput && message) {
 
     newsletterForm.addEventListener("submit", function (event) {
 
-        // Prevent page reload
+        
         event.preventDefault();
 
-        // Get the email entered by the user
+        
         const email = emailInput.value.trim();
 
         if (email !== "") {
